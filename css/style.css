@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    transition: all 0.3s;
+    background: var(--color3);
+}
+:root{
+    --color1 : #1D4ED8;
+    --color2 : #000;
+    --color3 : #fff;
+    --color4 : #00224D;
+    --color5 : #3f3f3f;
+    --color6 : #222831;
+    --color7 : #fff;
+    --color8 : #222831;
+    --color9 : #c1c1c1;
+}
+.dark-theme{
+    --color1 : #00a6ff;
+    --color2 : #fff;
+    --color3 : #222831;
+    --color4 : rgb(255, 255, 0);
+    --color5 : #bdbdbd;
+    --color6 : #fff;
+    --color7 : #222831;
+    --color8 : #fff;
+    --color9 : #676767;
+}
+/* frontpage start */
+/* navbar start */
+.header, .headerCenter, .headerLeft{
+    z-index: 9999;
+}
+.headerCenter ul li{
+    z-index: 10;
+}
+.headerCenter ul li:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--color1);
+    z-index: -1;
+    cursor: pointer;
+}
+.headerCenter ul li:hover:before{
+    left: 0%;
+}
+/* navbar transitions */
+.headerRight a, .themeBtn, .headerCenter ul li, .headerCenter ul li:before, .headerCenter, .header, .headerLeft{
+    transition: all 0.3s;
+}
+/* navbar transitions */
+/* navbar end */
+
+/* first page content start */
+.fSocial a:nth-child(1){
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fSocial a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background: var(--color6);
+    top: 110%;
+    border-radius: 10px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.fSocial a:hover::after{
+    opacity: 1;
+    top: 100%;
+}
+.fcLeft .fBtn button{
+    transition: all 0.3s;
+}
+.fcLeft .name{
+    font-size: clamp(65px, 8vw, 80px);
+}
+.fcRightCont div{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.fcRightCont div:nth-child(1){
+    animation: updown1 infinite linear 1.5s;
+}
+.fcRightCont div:nth-child(2){
+    animation: updown2 infinite linear 1.5s;
+}
+.fcRightCont div:nth-child(3){
+    animation: updown3 infinite linear 1.5s;
+}
+@keyframes updown1{
+    0%{top: 10%;}
+    50%{top: 9%;}
+    100%{top: 10%;}
+}
+@keyframes updown2{
+    0%{bottom: -10%;}
+    50%{bottom: -9%;}
+    100%{bottom: -10%;}
+}
+@keyframes updown3{
+    0%{bottom: 10%;}
+    50%{bottom: 9%;}
+    100%{bottom: 10%;}
+}
+.tStack div img{
+    animation: techw infinite linear 2s;
+}
+@keyframes techw{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(.5rem);}
+    100%{transform: translateY(0);}
+}
+.tStack div img:nth-child(1){animation-delay: .4s;}
+.tStack div img:nth-child(2){animation-delay: .8s;}
+.tStack div img:nth-child(3){animation-delay: 1.2s;}
+.tStack div img:nth-child(4){animation-delay: 1.6s;}
+.tStack div img:nth-child(5){animation-delay: 1.8s;}
+/* first page content end*/
+/* frontpage end */
+
+/* secondpage start */
+#spcImg{
+    box-shadow: 0px 0px 5px #1e1e1e;
+}
+#spccard{
+    box-shadow: 0px 0px 6px #1e1e1e;
+}
+#rotateCircle{
+    box-shadow: 0px 0px 10px #1e1e1e;
+    animation: rotate infinite linear 10s;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* secondpage end */
+
+/* thirdpage start */
+.frontend, .backend, .tpcCard{
+    box-shadow: 0px 0px 10px #333333;
+}
+/* thirdpage end */
+
+/* fifth page start*/
+.cCard{
+    box-shadow: 0px 0px 10px #313131;
+}
+/* fifth page end*/
+
+/* media query start*/
+@media only screen and (max-width:768px){
+    .headerCenter{
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 0vh;
+        background-color: var(--color3);
+    }
+    .active{
+        width: 100%;
+        height: 90vh;
+    }
+    .headerCenter ul{
+        gap: 2rem;
+        flex-direction: column;
+    }
+}
+/* media query end*/
