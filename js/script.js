@@ -18,3 +18,15 @@ function toggleTheme() {
     document.body.classList.toggle("dark-theme");
 }
 themeBtn.addEventListener("click", toggleTheme);
+
+var typed = new Typed(".auto-type", {
+    strings: ["Frontend Web Developer", "UI/UX Designer", "Freelancer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+});
+
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function(){
+    loader.style.top = "-200%";
+});
