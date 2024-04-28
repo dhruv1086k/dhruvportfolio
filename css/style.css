@@ -40,7 +40,7 @@ body {
 #preloader{
     width: 100%;
     height: 100vh;
-    background: #000;
+    background: #fff;
     z-index: 999999;
     position: fixed;
     top: 0%;
@@ -50,7 +50,7 @@ body {
     transition: all 1.5s;
 }
 #preloader img{
-    width: 20rem;
+    width: 30rem;
 }
 /* frontpage start */
 /* navbar start */
@@ -114,7 +114,9 @@ body {
     opacity: 0;
     transition: all 0.3s;
 }
-
+#fSocial_ a::after {
+    background: #fff;
+}
 .fSocial a:hover::after {
     opacity: 1;
     top: 100%;
@@ -222,6 +224,37 @@ body {
 
 .tStack div img:nth-child(5) {
     animation-delay: 1.8s;
+}
+
+#tpcCardImg{
+    transition: all 0.3s;
+}
+#btnanim, #btnanim_{
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    transition: all 0.5s;
+}
+#btnanim:hover, #btnanim_:hover{
+    font-weight: 600;
+}
+#btnanim::after, #btnanim_::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color7);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    top: -450%;
+    left: -30%;
+    transition: all 1s;
+    z-index: -1;
+}
+#btnanim::after{
+    left: -70%;
+}
+#btnanim:hover::after, #btnanim_:hover::after{
+    top: -100%;
 }
 
 /* first page content end*/
