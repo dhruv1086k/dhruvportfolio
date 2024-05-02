@@ -368,3 +368,32 @@ body {
         flex-direction: column;
     }
 }
+@media only screen and (max-height:740px){
+    .secondPage{
+        margin-top: 5rem;
+    }
+    .thirdPage{
+        margin-top: 12rem;
+        height: 130vh;
+    }
+    .spcLeft div{
+        height: 14rem;
+    }
+    .thirdPageContent{
+        height: 100vh;
+    }
+    .frontend, .backend{
+        height: 60vh;
+    }
+}
+@media only screen and (max-height:650px){
+    .secondPage{
+        margin-top: 10rem;
+    }
+    .thirdPage{
+        margin-top: 16rem;
+    }
+    .fifthPage{
+        margin-top: 55rem;
+    }
+}
