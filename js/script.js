@@ -20,7 +20,7 @@ function toggleTheme() {
 themeBtn.addEventListener("click", toggleTheme);
 
 var typed = new Typed(".auto-type", {
-    strings: ["Frontend Web Developer", "UI/UX Designer", "Freelancer"],
+    strings: ["Frontend Web Developer", "UI/UX Designer"],
     typeSpeed: 100,
     backSpeed: 100,
     loop: true

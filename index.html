@@ -1,354 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DHRUV PAL | Frontend Web Developer</title>
-    <link rel="icon" href="./images/img12.ico">
-    <link href="./css/output.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e64b4eb724.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/img12.ico" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/e64b4eb724.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div id="preloader">
-        <img src="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif" alt="">
+      <img
+        src="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif"
+        alt=""
+      />
     </div>
-    <div class="frontPage w-full h-screen px-32 max-xl:px-10 max-sm:px-3 max-lg:h-[120vh] max-sm:h-auto" id="firstPage">
-        <div class="header w-full h-[10vh] flex bg-[color:var(--color3)] fixed left-0 px-32 max-xl:px-10 max-sm:px-3">
-            <div
-                class="headerLeft h-full w-[20%] flex justify-start items-center max-xl:w-[10%] max-md:w-[70%] text-[color:var(--color2)]">
-                <a href="#firstPage">
-                    <h1 class="text-4xl font-bold cursor-pointer">DP.</h1>
-                </a>
-            </div>
-            <div class="headerCenter h-full w-[60%] max-xl:w-[70%]">
-                <ul class="w-full h-full flex gap-16 justify-center items-center max-xl:gap-6">
-                    <li class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"><a
-                            href="#firstPage" class="px-4 py-1">Home</a></li>
-                    <li class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"><a
-                            href="#secondPage" class="px-4 py-1">Skills</a></li>
-                    <li class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"><a
-                            href="#thirdPage" class="px-4 py-1">Experience</a></li>
-                    <li class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"><a
-                            href="#fourthPage" class="px-4 py-1">Projects</a></li>
-                </ul>
-            </div>
-            <div
-                class="headerRight h-full w-[20%] flex justify-end items-center gap-7 max-md:w-[10%]  max-sm:w-[15%] max-sm:justify-center">
-                <i
-                    class="themeBtn fa-solid fa-moon text-[color:var(--color4)] cursor-pointer text-xl max-md:text-2xl"></i>
-                <a href="https://drive.google.com/uc?export=download&id=1aNg8EQcKmd_LBL4q3gDyEV9ymMu5QYTo"
-                    class="bg-[--color1] px-5 py-1 text-white rounded-md flex justify-center items-center gap-1 hover:bg-[#263e86] hover:shadow-2xl max-md:hidden">Resume<i
-                        class="fa-solid fa-arrow-right"></i></a>
-            </div>
-            <div class="hamburgerMenu hidden w-[10%] h-full justify-center items-center max-md:flex max-sm:w-[15%]">
-                <div
-                    class="container w-[90%] h-[90%] gap-y-2 flex flex-col justify-center items-end max-sm:items-center">
-                    <div class="w-[2rem] h-[4px] rounded-xl bg-[color:var(--color2)]"></div>
-                    <div class="w-[2rem] h-[4px] rounded-xl bg-[color:var(--color2)]"></div>
-                    <div class="w-[2rem] h-[4px] rounded-xl bg-[color:var(--color2)]"></div>
-                </div>
-            </div>
-        </div>
-        <div class="firstContent w-full h-[100vh] pt-[10vh] flex max-lg:flex-col-reverse">
-            <div
-                class="fcLeft w-1/2 h-full flex flex-col pt-[10rem] max-lg:w-full max-lg:h-[50vh] max-lg:pt-8 max-lg:text-center">
-                <h3
-                    class="text-3xl text-[color:var(--color2)] font-medium flex items-start h-[4vh] max-lg:justify-center">
-                    Hii I'm<img
-                        src="https://em-content.zobj.net/source/animated-noto-color-emoji/356/waving-hand_1f44b.gif"
-                        alt="" class="h-[90%] inline"></h3>
-                <h1 class="name font-bold -mx-2 mt-2 text-[color:var(--color1)]">Dhruv Pal</h1>
-                <h4 class="text-xl text-[color:var(--color2)] font-semibold"><span class="auto-type"></span></h4>
-                <p class="text-[color:var(--color5)]">A passionate Frontend Developer based in <br>Delhi, India📍</p>
-                <div class="fBtn flex gap-x-10 mt-10 max-lg:justify-center">
-                            <a href="https://drive.google.com/uc?export=download&id=1aNg8EQcKmd_LBL4q3gDyEV9ymMu5QYTo" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim_">Resume &#8599;</a>
-                            <a href="#fifthPage"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim_">Contact</a>
-                </div>
-                <div class="fSocial mt-5 flex gap-x-3 max-lg:justify-center">
-                    <a href="https://www.instagram.com/dhruvpal63/" target="_blank"
-                        class="relative w-[25px] h-[30px] flex justify-center items-center"><i
-                            class="fa-brands fa-instagram text-lg"></i></a>
-                    <a href="https://www.linkedin.com/in/dhruv1086k/" target="_blank"
-                        class="relative w-[25px] h-[30px] flex justify-center items-center text-[#0A66C2]"><i
-                            class="fa-brands fa-linkedin-in text-lg"></i></a>
-                    <a href="https://github.com/dhruv1086k" target="_blank"
-                        class="relative w-[25px] h-[30px] flex justify-center items-center text-[#9E5EB8]"><i
-                            class="fa-brands fa-github text-lg"></i></a>
-                </div>
-                <div
-                    class="tStack flex items-center mt-32 max-lg:w-full max-lg:justify-center max-lg:mt-16 max-sm:mt-5 max-lg:flex-col">
-                    <h1 class="text-xl font-bold text-[color:var(--color6)]">Tech Stack </h1>
-                    <div class="flex">
-                        <img src="./images/img5.png" alt="" class="w-[40px]">
-                        <img src="./images/img6.png" alt="" class="w-[40px]">
-                        <img src="./images/img7.png" alt="" class="w-[40px]">
-                        <img src="./images/img8.png" alt="" class="w-[40px]">
-                        <img src="./images/img9.png" alt="" class="w-[40px]">
-                    </div>
-                </div>
-            </div>
-            <div
-                class="fcRight w-1/2 h-full flex justify-center max-xl:justify-end pr-10 max-lg:w-full max-lg:h-[50vh] max-lg:justify-center max-lg:pr-0 max-lg:pt-2">
-                <div
-                    class="fcRightCont w-[20rem] h-[65%] mt-24 rounded-md bg-[url('../images/img1.jpg')] shadow-md bg-no-repeat bg-cover bg-center relative max-lg:mt-0 max-lg:w-[12rem] max-lg:h-[90%]">
-                    <div class="w-[5rem] absolute top-[10%] left-[-10%] rounded-lg max-lg:w-[3rem]"><img
-                            src="./images/img2.png" alt="" class="rounded-lg"></div>
-                    <div class="w-[5rem] absolute bottom-[-10%] left-[-15%] rounded-lg max-lg:w-[3rem]"><img
-                            src="./images/img3.png" alt="" class="rounded-lg"></div>
-                    <div class="w-[5rem] absolute bottom-[10%] right-[-10%] rounded-lg max-lg:w-[3rem]"><img
-                            src="./images/img4.png" alt="" class="rounded-lg"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="secondPage w-full h-screen pt-[10vh] px-32 max-xl:px-10 max-sm:px-3" id="secondPage">
-        <div class="secondPageHeader w-full h-[15vh] flex flex-col justify-center items-center gap-y-1">
-            <p class="text-[color:var(--color5)]" data-aos="zoom-in">Get To Know More</p>
-            <h1 class="text-5xl font-semibold text-[color:var(--color2)]" data-aos="zoom-in">About Me</h1>
-        </div>
-        <div class="secondPageContent w-full h-[75vh] flex max-lg:flex-col">
-            <div class="spcLeft w-1/2 h-full max-lg:h-[45%] flex max-lg:w-full max-lg:justify-center max-lg:mb-10">
-                <div class="w-3/4 h-3/4 bg-no-repeat bg-cover rounded-3xl bg-top max-lg:h-full max-lg:w-[15rem] flex justify-center items-end relative"
-                    style="background-image: url('images/img10.jpg');" data-aos="fade-up" data-aos-offset="250">
-                    <img src="./images/circle.png"
-                        class="w-[8rem] rounded-full absolute -bottom-16 max-lg:w-[4rem] max-lg:-bottom-8"
-                        id="rotateCircle">
-                </div>
-            </div>
-            <div
-                class="spcRight w-1/2 h-full pt-10 pb-[10vh] max-lg:w-full max-xl:py-[8vh] max-sm:pt-[3rem] max-lg:h-[60%]">
-                <div class=" h-1/2 flex justify-between mb-5 gap-x-5 max-sm:gap-x-1 max-md:mb-5" data-aos="fade-up"
-                    data-aos-offset="250">
-                    <div class="w-1/2 h-[12rem] flex flex-col justify-start items-center rounded-3xl pt-6 max-sm:px-1"
-                        id="spccard">
-                        <div>
-                            <img src="./images/img20.png" alt="" class="w-14">
-                        </div>
-                        <h3 class="text-[#000] text-xl font-semibold">Experience</h3>
-                        <p class="text-[#3f3f3f]">4+ years</p>
-                        <p class="text-[#3f3f3f] max-sm:text-center">Frontend Development</p>
-                    </div>
-                    <div class="w-1/2 h-[12rem] flex flex-col justify-start items-center rounded-3xl pt-6 max-sm:px-1"
-                        id="spccard">
-                        <div>
-                            <img src="./images/img19.png" alt="" class="w-14">
-                        </div>
-                        <h3 class="text-[#000] text-xl font-semibold">Education</h3>
-                        <p class="text-[#3f3f3f]">2023 - 2026</p>
-                        <p class="text-[#3f3f3f] max-sm:text-center">BCA Bachelors Degree</p>
-                    </div>
-                </div>
-                <div class="aboutText h-1/2 text-lg max-sm:text-md text-[color:var(--color5)] max-lg:mt-32 max-sm:mt-[7rem] max-lg:text-center"
-                    data-aos="fade-up" data-aos-offset="100">
-                    Hey, my name is Dhruv, and I'm a Frontend Developer and an aspiring UI/UX designer. My passion is to
-                    create and develop a clean UI/UX Web design for my users. My main stack currently is Tailwind CSS in
-                    combination with Javascript and Vanilla CSS.
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="thirdPage h-screen pt-[10vh] w-full px-32 max-xl:px-10 max-sm:px-3 max-xl:mt-5 max-sm:mt-20"
-        id="thirdPage">
-        <div class="thirdPageHeader w-full h-[20vh] flex flex-col justify-center items-center gap-y-1">
-            <p class="text-[color:var(--color5)] text-lg" data-aos="zoom-in" data-aos-offset="150">Explore My</p>
-            <div class="w-full h-[10vh] overflow-hidden flex items-center max-sm:h-[20vh] max-sm:items-start"
-                data-aos="zoom-in" data-aos-offset="150">
-                <h1
-                    class="leftRight text-7xl text-[color:var(--color2)] uppercase font-bold whitespace-nowrap mt-2 max-sm:text-5xl">
-                    Experience . UI Designer . Web Developer . Experience . UI Designer . Web Developer . Experience .
-                    UI Designer . Web Developer . Experience . UI Designer . Web Developer . Experience . UI Designer .
-                    Web Developer . Experience . UI Designer . Web Developer . Experience . UI Designer . Web Developer
-                    . Experience . UI Designer . Web Developer . Experience . UI Designer . Web Developer . Experience .
-                    UI Designer . Web Developer</h1>
-            </div>
-        </div>
-        <div class="thirdPageContent w-full h-[70vh] flex max-lg:flex-col justify-evenly items-center gap-y-10 max-sm:pb-10"
-            data-aos="zoom-in" data-aos-offset="150">
-            <div class="frontend stack w-[450px] h-[40vh] rounded-3xl flex flex-wrap max-sm:w-[350px]">
-                <div class="w-1/2 flex items-center pl-10 max-sm:pl-5">
-                    <div class="flex justify-center items-start gap-x-2">
-                        <div><img src="./images/img5.png" alt="" class="w-10"></div>
-                        <div>
-                            <h1 class="text-[#000] font-semibold">HTML</h1>
-                            <p class="text-sm text-[#3f3f3f]">Experienced</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
-                    <div class="flex justify-center items-start gap-x-2">
-                        <div><img src="./images/img6.png" alt="" class="w-10"></div>
-                        <div>
-                            <h1 class="text-[#000] font-semibold">CSS</h1>
-                            <p class="text-sm text-[#3f3f3f]">Experienced</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
-                    <div class="flex justify-center items-start gap-x-2">
-                        <div><img src="./images/img7.png" alt="" class="w-10"></div>
-                        <div>
-                            <h1 class="text-[#000] font-semibold">JAVASCRIPT</h1>
-                            <p class="text-sm text-[#3f3f3f]">Intermediate</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
-                    <div class="flex justify-center items-start gap-x-2">
-                        <div><img src="./images/img9.png" alt="" class="w-10"></div>
-                        <div>
-                            <h1 class="text-[#000] font-semibold">TAILWIND</h1>
-                            <p class="text-sm text-[#3f3f3f]">Experienced</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
-                    <div class="flex justify-center items-start gap-x-2">
-                        <div><img src="./images/img8.png" alt="" class="w-10"></div>
-                        <div>
-                            <h1 class="text-[#000] font-semibold">BOOTSTRAP</h1>
-                            <p class="text-sm text-[#3f3f3f]">Experienced</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="backend stack w-[450px] h-[40vh] rounded-3xl flex max-sm:w-[350px]">
-                <div class="w-1/2 h-[14vh] flex pl-10 max-sm:pl-5 items-center">
-                    <div class="flex justify-center items-start gap-x-2">
-                        <div><img src="./images/img18.png" alt="" class="w-10"></div>
-                        <div>
-                            <h1 class="text-[#000] font-semibold">NODE JS</h1>
-                            <p class="text-sm text-[#3f3f3f]">Basic</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fourthPage h-screen pt-[10vh] w-full px-32 max-xl:px-10 max-sm:px-3 max-[687px]:mb-[50rem]"
-        id="fourthPage">
-        <div class="fourthPageHeader w-full h-[15vh] flex flex-col justify-center items-center gap-y-1">
-            <p class="text-[color:var(--color5)]" data-aos="zoom-in" data-aos-offset="150">Browse My Recent</p>
-            <h1 class="text-5xl font-semibold text-[color:var(--color2)]" data-aos="zoom-in" data-aos-offset="150">
-                Projects</h1>
-        </div>
-        <div class="fourthPageContent w-full h-[75vh] flex flex-wrap justify-evenly items-center gap-y-5 max-sm:pb-10">
-            <div class="tpcCard w-[20rem] h-[25rem] rounded-3xl border-2 border-[color:var(--color6)] max-xl:w-[18rem] mx-2 overflow-hidden"
-                data-aos="flip-left" data-aos-offset="250">
-                <div class="w-full h-[70%] p-5 hover:p-0" id="tpcCardImg"><img src="./images/img13.png" alt=""
-                        class="w-full h-full rounded-2xl">
-                </div>
-                <div class="w-full h-[30%] p-5 text-center flex flex-col justify-center items-center gap-y-2">
-                    <h1 class="text-xl font-semibold text-[color:var(--color6)]">Tech Fest</h1>
-                    <div class="flex gap-x-2">
-                        <a href="https://github.com/dhruv1086k/techsamaaroh.git" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim">Github</a>
-                        <a href="https://dhruv1086k.github.io/techsamaaroh/" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim_">Live
-                            Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tpcCard w-[20rem] h-[25rem] rounded-3xl border-2 border-[color:var(--color6)] max-xl:w-[18rem] mx-2 overflow-hidden"
-                data-aos="flip-left" data-aos-offset="250">
-                <div class="w-full h-[70%] p-5 hover:p-0" id="tpcCardImg"><img src="./images/img14.png" alt=""
-                        class="w-full h-full rounded-2xl">
-                </div>
-                <div class="w-full h-[30%] p-5 text-center flex flex-col justify-center items-center gap-y-2">
-                    <h1 class="text-xl font-semibold text-[color:var(--color6)]">Andaman Tourism</h1>
-                    <div class="flex gap-x-2">
-                        <a href="https://github.com/dhruv1086k/2.git" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim">Github</a>
-                        <a href="https://dhruv1086k.github.io/2/" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim_">Live
-                            Demo</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tpcCard w-[20rem] h-[25rem] rounded-3xl border-2 border-[color:var(--color6)] max-xl:w-[18rem] mx-2 overflow-hidden"
-                data-aos="flip-left" data-aos-offset="250">
-                <div class="w-full h-[70%] p-5 hover:p-0" id="tpcCardImg"><img src="./images/img15.png" alt=""
-                        class="w-full h-full rounded-2xl">
-                </div>
-                <div class="w-full h-[30%] p-5 text-center flex flex-col justify-center items-center gap-y-2">
-                    <h1 class="text-xl font-semibold text-[color:var(--color6)]">VR Tech</h1>
-                    <div class="flex gap-x-2">
-                        <a href="https://github.com/dhruv1086k/4.git" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim">Github</a>
-                        <a href="https://dhruv1086k.github.io/4/" target="_blank"
-                            class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
-                            id="btnanim_">Live
-                            Demo</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fifthPage w-full h-[30vh] px-32 max-xl:px-10 max-sm:px-3 max-[991px]:mt-[20rem] max-md:h-[40vh]"
-        id="fifthPage" data-aos="slide-up">
+    <div
+      class="frontPage w-full h-screen px-32 max-xl:px-10 max-sm:px-3 max-lg:h-[120vh] max-sm:h-auto"
+      id="firstPage"
+    >
+      <div
+        class="header w-full h-[10vh] flex bg-[color:var(--color3)] fixed left-0 px-32 max-xl:px-10 max-sm:px-3"
+      >
         <div
-            class="fpupper w-full h-[50%] flex flex-col justify-center gap-y-2 bg-[color:var(--color6)] pl-5 rounded-t-3xl">
-            <h1 class="text-3xl font-bold text-[#00a6ff]">CONTACT</h1>
-            <p class="text-xl font-bold text-[--color3]">Wanna Catch Up👇</p>
+          class="headerLeft h-full w-[20%] flex justify-start items-center max-xl:w-[10%] max-md:w-[70%] text-[color:var(--color2)]"
+        >
+          <a href="#firstPage">
+            <h1 class="text-4xl font-bold cursor-pointer">DP.</h1>
+          </a>
+        </div>
+        <div class="headerCenter h-full w-[60%] max-xl:w-[70%]">
+          <ul
+            class="w-full h-full flex gap-16 justify-center items-center max-xl:gap-6"
+          >
+            <li
+              class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"
+            >
+              <a href="#firstPage" class="px-4 py-1">Home</a>
+            </li>
+            <li
+              class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"
+            >
+              <a href="#secondPage" class="px-4 py-1">Skills</a>
+            </li>
+            <li
+              class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"
+            >
+              <a href="#thirdPage" class="px-4 py-1">Experience</a>
+            </li>
+            <li
+              class="headli text-[color:var(--color2)] hover:text-white relative overflow-hidden"
+            >
+              <a href="#fourthPage" class="px-4 py-1">Projects</a>
+            </li>
+          </ul>
         </div>
         <div
-            class="fplower w-full h-[50%] flex bg-[color:var(--color6)] pl-5 rounded-b-3xl max-md:flex-col max-md:pb-10">
-            <div class="w-1/2 h-full flex">
-                <div class="w-[20%] h-full flex justify-start items-center">
-                    <img src="./images/img16.gif" alt="" class="cCard rounded-full w-[60%] max-md:w-[90%]">
-                </div>
-                <div class="w-[80%] h-full flex flex-col justify-center items-start max-md:pl-2">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=dhruvpal.2702@gmail.com">
-                        <h1 class="text-xl text-[color:var(--color3)]">Mail</h1>
-                        <p class="text-md text-[color:var(--color9)]">dhruvpal.2702@gmail.com</p>
-                    </a>
-                </div>
-            </div>
-            <div class="w-1/2 h-full flex">
-                <div class="w-[20%] h-full flex justify-start items-center">
-                    <img src="./images/img17.gif" alt="" class="cCard rounded-full w-[60%] max-md:w-[90%]">
-                </div>
-                <div class="w-[80%] h-full flex flex-col justify-center items-start max-md:pl-2">
-                    <h1 class="text-xl text-[color:var(--color3)]">Location</h1>
-                    <p class="text-md text-[color:var(--color9)]">Delhi, India</p>
-                </div>
-            </div>
+          class="headerRight h-full w-[20%] flex justify-end items-center gap-7 max-md:w-[10%] max-sm:w-[15%] max-sm:justify-center"
+        >
+          <i
+            class="themeBtn fa-solid fa-moon text-[color:var(--color4)] cursor-pointer text-xl max-md:text-2xl"
+          ></i>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1171D4kCMxc9IEMtYmIy5uoURCSMxLAcp"
+            class="bg-[--color1] px-5 py-1 text-white rounded-md flex justify-center items-center gap-1 hover:bg-[#263e86] hover:shadow-2xl max-md:hidden"
+            >Resume<i class="fa-solid fa-arrow-right"></i
+          ></a>
         </div>
+        <div
+          class="hamburgerMenu hidden w-[10%] h-full justify-center items-center max-md:flex max-sm:w-[15%]"
+        >
+          <div
+            class="container w-[90%] h-[90%] gap-y-2 flex flex-col justify-center items-end max-sm:items-center"
+          >
+            <div
+              class="w-[2rem] h-[4px] rounded-xl bg-[color:var(--color2)]"
+            ></div>
+            <div
+              class="w-[2rem] h-[4px] rounded-xl bg-[color:var(--color2)]"
+            ></div>
+            <div
+              class="w-[2rem] h-[4px] rounded-xl bg-[color:var(--color2)]"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="firstContent w-full h-[100vh] pt-[10vh] flex max-lg:flex-col-reverse"
+      >
+        <div
+          class="fcLeft w-1/2 h-full flex flex-col pt-[10rem] max-lg:w-full max-lg:h-[50vh] max-lg:pt-8 max-lg:text-center"
+        >
+          <h3
+            class="text-3xl text-[color:var(--color2)] font-medium flex items-start h-[4vh] max-lg:justify-center"
+          >
+            Hii I'm<img
+              src="https://em-content.zobj.net/source/animated-noto-color-emoji/356/waving-hand_1f44b.gif"
+              alt=""
+              class="h-[90%] inline"
+            />
+          </h3>
+          <h1 class="name font-bold -mx-2 mt-2 text-[color:var(--color1)]">
+            Dhruv Pal
+          </h1>
+          <h4 class="text-xl text-[color:var(--color2)] font-semibold">
+            <span class="auto-type"></span>
+          </h4>
+          <p class="text-[color:var(--color5)]">
+            A passionate Frontend Developer based in <br />Delhi, India📍
+          </p>
+          <div class="fBtn flex gap-x-10 mt-10 max-lg:justify-center">
+            <a
+              href="https://drive.google.com/uc?export=download&id=1171D4kCMxc9IEMtYmIy5uoURCSMxLAcp"
+              target="_blank"
+              class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
+              id="btnanim_"
+              >Resume &#8599;</a
+            >
+            <a
+              href="#fifthPage"
+              class="bg-[color:var(--color6)] px-5 py-2 rounded-3xl border-2 border-[color:var(--color8)] text-[color:var(--color3)] hover:text-[color:var(--color6)]"
+              id="btnanim_"
+              >Contact</a
+            >
+          </div>
+          <div class="fSocial mt-5 flex gap-x-3 max-lg:justify-center">
+            <a
+              href="https://www.linkedin.com/in/dhruv1086k/"
+              target="_blank"
+              class="relative w-[25px] h-[30px] flex justify-center items-center text-[#0A66C2]"
+              ><i class="fa-brands fa-linkedin-in text-lg"></i
+            ></a>
+            <a
+              href="https://github.com/dhruv1086k"
+              target="_blank"
+              class="relative w-[25px] h-[30px] flex justify-center items-center text-[#9E5EB8]"
+              ><i class="fa-brands fa-github text-lg"></i
+            ></a>
+          </div>
+          <div
+            class="tStack flex items-center mt-32 max-lg:w-full max-lg:justify-center max-lg:mt-16 max-sm:mt-5 max-lg:flex-col"
+          >
+            <h1 class="text-xl font-bold text-[color:var(--color6)]">
+              Tech Stack
+            </h1>
+            <div class="flex">
+              <img src="./images/img5.png" alt="" class="w-[40px]" />
+              <img src="./images/img6.png" alt="" class="w-[40px]" />
+              <img src="./images/img7.png" alt="" class="w-[40px]" />
+              <img src="./images/img8.png" alt="" class="w-[40px]" />
+              <img src="./images/img9.png" alt="" class="w-[40px]" />
+              <img src="./images/img21.png" alt="" class="w-[40px]" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="fcRight w-1/2 h-full flex justify-center max-xl:justify-end pr-10 max-lg:w-full max-lg:h-[50vh] max-lg:justify-center max-lg:pr-0 max-lg:pt-2"
+        >
+          <div
+            class="fcRightCont w-[20rem] h-[65%] mt-24 rounded-md bg-[url('../images/img1.jpg')] shadow-md bg-no-repeat bg-cover bg-center relative max-lg:mt-0 max-lg:w-[12rem] max-lg:h-[90%]"
+          >
+            <div
+              class="w-[5rem] absolute top-[10%] left-[-10%] rounded-lg max-lg:w-[3rem]"
+            >
+              <img src="./images/img2.png" alt="" class="rounded-lg" />
+            </div>
+            <div
+              class="w-[5rem] absolute bottom-[-10%] left-[-15%] rounded-lg max-lg:w-[3rem]"
+            >
+              <img src="./images/img22.png" alt="" class="rounded-lg" />
+            </div>
+            <div
+              class="w-[5rem] absolute bottom-[10%] right-[-10%] rounded-lg max-lg:w-[3rem]"
+            >
+              <img src="./images/img4.png" alt="" class="rounded-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="sixthPage w-full h-[10vh] flex justify-between items-center bg-[#222831] mt-10 px-32 max-xl:px-10 max-sm:px-3 max-md:flex-col max-md:h-[20vh] max-md:py-5">
-        <h1 class="text-[#00a6ff] font-bold">Developed by Dhruv Pal 😉</h1>
-        <p class="text-[#fff]">Copyright © 2024. All rights are reserved</p>
-        <div class="fSocial flex gap-x-5" id="fSocial_">
-            <a href="https://www.instagram.com/dhruvpal63/" target="_blank"
-                class="relative w-[25px] h-[30px] flex justify-center items-center"><i
-                    class="fa-brands fa-instagram text-lg"></i></a>
-            <a href="https://www.linkedin.com/in/dhruv1086k/" target="_blank"
-                class="relative w-[25px] h-[30px] flex justify-center items-center text-[#0A66C2]"><i
-                    class="fa-brands fa-linkedin-in text-lg"></i></a>
-            <a href="https://github.com/dhruv1086k" target="_blank"
-                class="relative w-[25px] h-[30px] flex justify-center items-center text-[#9E5EB8]"><i
-                    class="fa-brands fa-github text-lg"></i></a>
+    <div
+      class="secondPage w-full h-screen pt-[10vh] px-32 max-xl:px-10 max-sm:px-3"
+      id="secondPage"
+    >
+      <div
+        class="secondPageHeader w-full h-[15vh] flex flex-col justify-center items-center gap-y-1"
+      >
+        <p class="text-[color:var(--color5)]" data-aos="zoom-in">
+          Get To Know More
+        </p>
+        <h1
+          class="text-5xl font-semibold text-[color:var(--color2)]"
+          data-aos="zoom-in"
+        >
+          About Me
+        </h1>
+      </div>
+      <div class="secondPageContent w-full h-[75vh] flex max-lg:flex-col">
+        <div
+          class="spcLeft w-1/2 h-full max-lg:h-[45%] flex max-lg:w-full max-lg:justify-center max-lg:mb-10"
+        >
+          <div
+            class="w-3/4 h-3/4 bg-no-repeat bg-cover rounded-3xl bg-top max-lg:h-full max-lg:w-[15rem] flex justify-center items-end relative"
+            style="background-image: url('images/img10.jpg')"
+            data-aos="fade-up"
+            data-aos-offset="250"
+          >
+            <img
+              src="./images/circle.png"
+              class="w-[8rem] rounded-full absolute -bottom-16 max-lg:w-[4rem] max-lg:-bottom-8"
+              id="rotateCircle"
+            />
+          </div>
         </div>
+        <div
+          class="spcRight w-1/2 h-full pt-10 pb-[10vh] max-lg:w-full max-xl:py-[8vh] max-sm:pt-[3rem] max-lg:h-[60%]"
+        >
+          <div
+            class="h-1/2 flex justify-between mb-5 gap-x-5 max-sm:gap-x-1 max-md:mb-5"
+            data-aos="fade-up"
+            data-aos-offset="250"
+          >
+            <div
+              class="w-1/2 h-[12rem] flex flex-col justify-start items-center rounded-3xl pt-6 max-sm:px-1"
+              id="spccard"
+            >
+              <div>
+                <img src="./images/img20.png" alt="" class="w-14" />
+              </div>
+              <h3 class="text-[#000] text-xl font-semibold">Experience</h3>
+              <p class="text-[#3f3f3f]"></p>
+              <p class="text-[#3f3f3f] max-sm:text-center">
+                Frontend Development
+              </p>
+            </div>
+            <div
+              class="w-1/2 h-[12rem] flex flex-col justify-start items-center rounded-3xl pt-6 max-sm:px-1"
+              id="spccard"
+            >
+              <div>
+                <img src="./images/img19.png" alt="" class="w-14" />
+              </div>
+              <h3 class="text-[#000] text-xl font-semibold">Education</h3>
+              <p class="text-[#3f3f3f]">2023 - 2026</p>
+              <p class="text-[#3f3f3f] max-sm:text-center">
+                BCA Bachelors Degree
+              </p>
+            </div>
+          </div>
+          <div
+            class="aboutText h-1/2 text-lg max-sm:text-md text-[color:var(--color5)] max-lg:mt-32 max-sm:mt-[7rem] max-lg:text-center"
+            data-aos="fade-up"
+            data-aos-offset="100"
+          >
+            Hey, my name is Dhruv, and I'm a Frontend Developer and an aspiring
+            UI/UX designer. My passion is to create and develop a clean UI/UX
+            Web design for my users. My main stack currently is ReactJS in
+            combination with Javascript and Tailwind CSS.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="thirdPage h-screen pt-[10vh] w-full px-32 max-xl:px-10 max-sm:px-3 max-xl:mt-5 max-sm:mt-20"
+      id="thirdPage"
+    >
+      <div
+        class="thirdPageHeader w-full h-[20vh] flex flex-col justify-center items-center gap-y-1"
+      >
+        <p
+          class="text-[color:var(--color5)] text-lg"
+          data-aos="zoom-in"
+          data-aos-offset="150"
+        >
+          Explore My
+        </p>
+        <div
+          class="w-full h-[10vh] overflow-hidden flex items-center max-sm:h-[20vh] max-sm:items-start"
+          data-aos="zoom-in"
+          data-aos-offset="150"
+        >
+          <h1
+            class="leftRight text-7xl text-[color:var(--color2)] uppercase font-bold whitespace-nowrap mt-2 max-sm:text-5xl"
+          >
+            Experience . UI Designer . Web Developer . Experience . UI Designer
+            . Web Developer . Experience . UI Designer . Web Developer .
+            Experience . UI Designer . Web Developer . Experience . UI Designer
+            . Web Developer . Experience . UI Designer . Web Developer .
+            Experience . UI Designer . Web Developer . Experience . UI Designer
+            . Web Developer . Experience . UI Designer . Web Developer .
+            Experience . UI Designer . Web Developer
+          </h1>
+        </div>
+      </div>
+      <div
+        class="thirdPageContent w-full h-[70vh] flex max-lg:flex-col justify-evenly items-center gap-y-10 max-sm:pb-10"
+        data-aos="zoom-in"
+        data-aos-offset="150"
+      >
+        <div
+          class="frontend stack w-[450px] h-[40vh] rounded-3xl flex flex-wrap max-sm:w-[350px]"
+        >
+          <div class="w-1/2 flex items-center pl-10 max-sm:pl-5">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img5.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">HTML</h1>
+                <p class="text-sm text-[#3f3f3f]">Experienced</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img6.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">CSS</h1>
+                <p class="text-sm text-[#3f3f3f]">Experienced</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img7.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">JAVASCRIPT</h1>
+                <p class="text-sm text-[#3f3f3f]">Experienced</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img9.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">TAILWIND</h1>
+                <p class="text-sm text-[#3f3f3f]">Experienced</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img8.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">BOOTSTRAP</h1>
+                <p class="text-sm text-[#3f3f3f]">Experienced</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-1/2 flex pl-10 max-sm:pl-5 items-center">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img21.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">REACTJS</h1>
+                <p class="text-sm text-[#3f3f3f]">Experienced</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="backend stack w-[450px] h-[40vh] rounded-3xl flex max-sm:w-[350px]"
+        >
+          <div class="w-1/2 h-[14vh] flex pl-10 max-sm:pl-5 items-center">
+            <div class="flex justify-center items-start gap-x-2">
+              <div><img src="./images/img18.png" alt="" class="w-10" /></div>
+              <div>
+                <h1 class="text-[#000] font-semibold">NODE JS</h1>
+                <p class="text-sm text-[#3f3f3f]">Intermediate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fourthPage h-screen pt-[10vh] w-full px-32 max-xl:px-10 max-sm:px-3 max-[687px]:mb-[50rem]"
+      id="fourthPage"
+    >
+      <div
+        class="fourthPageHeader w-full h-[15vh] flex flex-col justify-center items-center gap-y-1"
+      >
+        <p
+          class="text-[color:var(--color5)]"
+          data-aos="zoom-in"
+          data-aos-offset="150"
+        >
+          Browse My Recent
+        </p>
+        <h1
+          class="text-5xl font-semibold text-[color:var(--color2)]"
+          data-aos="zoom-in"
+          data-aos-offset="150"
+        >
+          Projects
+        </h1>
+      </div>
+      <div
+        class="fourthPageContent w-full h-[75vh] flex flex-wrap justify-evenly items-center gap-y-5 max-sm:pb-10"
+      >
+        <div class="container">
+          <!-- Swiper Slider -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="card__article">
+                  <img
+                    src="./images/6.png"
+                    alt="image"
+                    class="card__img"
+                  />
+                  <div class="card__data">
+                    <span class="card__description">ReactJS, Tailwind CSS</span>
+                    <h2 class="card__title">AI Resume Builder</h2>
+                    <div class="flex flex-col">
+                      <a href="#" class="card__button">Live Demo</a>
+                      <a href="https://github.com/dhruv1086k/Resume-Builder.git" class="card__button mt-1">Github</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card__article">
+                  <img
+                    src="./images/img14.png"
+                    alt="image"
+                    class="card__img"
+                  />
+                  <div class="card__data">
+                    <span class="card__description">ReactJS, Tailwind CSS</span>
+                    <h2 class="card__title">Dice Game</h2>
+                    <div class="flex flex-col">
+                      <a href="https://dpdicegame.netlify.app/" class="card__button">Live Demo</a>
+                      <a href="https://github.com/dhruv1086k/dice_game.git" class="card__button mt-1">Github</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card__article">
+                  <img
+                    src="./images/img15.png"
+                    alt="image"
+                    class="card__img"
+                  />
+                  <div class="card__data">
+                    <span class="card__description">ReactJS</span>
+                    <h2 class="card__title">Weather App</h2>
+                    <div class="flex flex-col">
+                      <a href="https://dpweather.netlify.app/" class="card__button">Live Demo</a>
+                      <a href="https://github.com/dhruv1086k/weatherApp.git" class="card__button mt-1">Github</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card__article">
+                  <img
+                    src="./images/img13.png"
+                    alt="image"
+                    class="card__img"
+                  />
+                  <div class="card__data">
+                    <span class="card__description"
+                      >Tailwind CSS, Javascript</span
+                    >
+                    <h2 class="card__title">Opportunity Educares</h2>
+                    <div class="flex flex-col">
+                      <a href="https://www.kamalkiclass.com/" class="card__button">Live Demo</a>
+                      <a href="https://github.com/dhruv1086k/OpportunityEducares.git" class="card__button mt-1">Github</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card__article">
+                  <img
+                    src="./images/4.png"
+                    alt="image"
+                    class="card__img"
+                  />
+                  <div class="card__data">
+                    <span class="card__description"
+                      >HTML, CSS</span
+                    >
+                    <h2 class="card__title">VR Tech</h2>
+                    <div class="flex flex-col">
+                      <a href="https://dpvrtech.netlify.app/" class="card__button">Live Demo</a>
+                      <a href="https://github.com/dhruv1086k/vrtech.git" class="card__button mt-1">Github</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="card__article">
+                  <img
+                    src="./images/5.png"
+                    alt="image"
+                    class="card__img"
+                  />
+                  <div class="card__data">
+                    <span class="card__description">ReactJS, Tailwind CSS</span>
+                    <h2 class="card__title">Logo Maker</h2>
+                    <div class="flex flex-col">
+                      <a href="https://icon-maker-rho.vercel.app/" class="card__button">Live Demo</a>
+                      <a href="https://github.com/dhruv1086k/LogoMaker.git" class="card__button mt-1">Github</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Add more slides as needed -->
+            </div>
+          </div>
+          <!-- Swiper Navigation Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="fifthPage w-full mt-5 h-[30vh] px-32 max-xl:px-10 max-sm:px-3 max-[991px]:mt-[20rem] max-md:h-[40vh]"
+      id="fifthPage"
+    >
+      <div
+        class="fpupper w-full h-[50%] flex flex-col justify-center gap-y-2 bg-[color:var(--color6)] pl-5 rounded-t-3xl"
+      >
+        <h1 class="text-3xl font-bold text-[#00a6ff]">CONTACT</h1>
+        <p class="text-xl font-bold text-[--color3]">Wanna Catch Up👇</p>
+      </div>
+      <div
+        class="fplower w-full h-[50%] flex bg-[color:var(--color6)] pl-5 rounded-b-3xl max-md:flex-col max-md:pb-10"
+      >
+        <div class="w-1/2 h-full flex">
+          <div class="w-[20%] h-full flex justify-start items-center">
+            <img
+              src="./images/img16.gif"
+              alt=""
+              class="cCard rounded-full w-[60%] max-md:w-[90%]"
+            />
+          </div>
+          <div
+            class="w-[80%] h-full flex flex-col justify-center items-start max-md:pl-2"
+          >
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=dhruvpal.2702@gmail.com"
+            >
+              <h1 class="text-xl text-[color:var(--color3)]">Mail</h1>
+              <p class="text-md text-[color:var(--color9)]">
+                dhruvpal.2702@gmail.com
+              </p>
+            </a>
+          </div>
+        </div>
+        <div class="w-1/2 h-full flex">
+          <div class="w-[20%] h-full flex justify-start items-center">
+            <img
+              src="./images/img17.gif"
+              alt=""
+              class="cCard rounded-full w-[60%] max-md:w-[90%]"
+            />
+          </div>
+          <div
+            class="w-[80%] h-full flex flex-col justify-center items-start max-md:pl-2"
+          >
+            <h1 class="text-xl text-[color:var(--color3)]">Location</h1>
+            <p class="text-md text-[color:var(--color9)]">Delhi, India</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sixthPage w-full h-[10vh] flex justify-between items-center bg-[#222831] mt-10 px-32 max-xl:px-10 max-sm:px-3 max-md:flex-col max-md:h-[20vh] max-md:py-5"
+    >
+      <h1 class="text-[#00a6ff] font-bold">Developed by Dhruv Pal 😉</h1>
+      <p class="text-[#fff]">Copyright © 2024. All rights are reserved</p>
+      <div class="fSocial flex gap-x-5" id="fSocial_">
+        <a
+          href="https://www.linkedin.com/in/dhruv1086k/"
+          target="_blank"
+          class="relative w-[25px] h-[30px] flex justify-center items-center text-[#0A66C2]"
+          ><i class="fa-brands fa-linkedin-in text-lg"></i
+        ></a>
+        <a
+          href="https://github.com/dhruv1086k"
+          target="_blank"
+          class="relative w-[25px] h-[30px] flex justify-center items-center text-[#9E5EB8]"
+          ><i class="fa-brands fa-github text-lg"></i
+        ></a>
+      </div>
     </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
-</body>
-
+  </body>
 </html>

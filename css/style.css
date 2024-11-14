@@ -1,94 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Josefin Sans", sans-serif;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-    transition: all 0.3s;
-    background: var(--color3);
-    overflow-x: hidden;
+  transition: all 0.3s;
+  background: var(--color3);
+  overflow-x: hidden;
 }
-
+/*=============== VARIABLES CSS ===============*/
 :root {
-    --color1: #1D4ED8;
-    --color2: #000;
-    --color3: #fff;
-    --color4: #00224D;
-    --color5: #3f3f3f;
-    --color6: #222831;
-    --color7: #fff;
-    --color8: #222831;
-    --color9: #c1c1c1;
+  --color1: #1d4ed8;
+  --color2: #000;
+  --color3: #fff;
+  --color4: #00224d;
+  --color5: #3f3f3f;
+  --color6: #222831;
+  --color7: #fff;
+  --color8: #222831;
+  --color9: #c1c1c1;
+  /*========== Colors ==========*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: 0.813rem;
 }
 
 .dark-theme {
-    --color1: #00a6ff;
-    --color2: #fff;
-    --color3: #222831;
-    --color4: rgb(255, 255, 0);
-    --color5: #bdbdbd;
-    --color6: #fff;
-    --color7: #222831;
-    --color8: #fff;
-    --color9: #676767;
+  --color1: #00a6ff;
+  --color2: #fff;
+  --color3: #222831;
+  --color4: rgb(255, 255, 0);
+  --color5: #bdbdbd;
+  --color6: #fff;
+  --color7: #222831;
+  --color8: #fff;
+  --color9: #676767;
 }
-#preloader{
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    z-index: 999999;
-    position: fixed;
-    top: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1.5s;
+#preloader {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 999999;
+  position: fixed;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1.5s;
 }
-#preloader img{
-    width: 30rem;
+#preloader img {
+  width: 30rem;
 }
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: var(--color3);
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: var(--color1);
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color3);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .header,
 .headerCenter,
 .headerLeft {
-    z-index: 9999;
+  z-index: 9999;
 }
 
 .headerCenter ul li {
-    z-index: 10;
+  z-index: 10;
 }
 
 .headerCenter ul li:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--color1);
-    z-index: -1;
-    cursor: pointer;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--color1);
+  z-index: -1;
+  cursor: pointer;
 }
 
 .headerCenter ul li:hover:before {
-    left: 0%;
+  left: 0%;
 }
 .headerRight a,
 .themeBtn,
@@ -97,303 +106,405 @@ body {
 .headerCenter,
 .header,
 .headerLeft {
-    transition: all 0.3s;
-}
-.fSocial a:nth-child(1) {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  transition: all 0.3s;
 }
 
 .fSocial a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    background: var(--color6);
-    top: 110%;
-    border-radius: 10px;
-    left: 0;
-    opacity: 0;
-    transition: all 0.3s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  background: var(--color6);
+  top: 110%;
+  border-radius: 10px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s;
 }
 #fSocial_ a::after {
-    background: #fff;
+  background: #fff;
 }
 .fSocial a:hover::after {
-    opacity: 1;
-    top: 100%;
+  opacity: 1;
+  top: 100%;
 }
 
 .fcLeft .fBtn button {
-    transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .fcLeft .name {
-    font-size: clamp(65px, 8vw, 80px);
+  font-size: clamp(65px, 8vw, 80px);
 }
 
 .fcRightCont div {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .fcRightCont div:nth-child(1) {
-    animation: updown1 infinite linear 1.5s;
+  animation: updown1 infinite linear 1.5s;
 }
 
 .fcRightCont div:nth-child(2) {
-    animation: updown2 infinite linear 1.5s;
+  animation: updown2 infinite linear 1.5s;
 }
 
 .fcRightCont div:nth-child(3) {
-    animation: updown3 infinite linear 1.5s;
+  animation: updown3 infinite linear 1.5s;
 }
 
 @keyframes updown1 {
-    0% {
-        top: 10%;
-    }
+  0% {
+    top: 10%;
+  }
 
-    50% {
-        top: 9%;
-    }
+  50% {
+    top: 9%;
+  }
 
-    100% {
-        top: 10%;
-    }
+  100% {
+    top: 10%;
+  }
 }
 
 @keyframes updown2 {
-    0% {
-        bottom: -10%;
-    }
+  0% {
+    bottom: -10%;
+  }
 
-    50% {
-        bottom: -9%;
-    }
+  50% {
+    bottom: -9%;
+  }
 
-    100% {
-        bottom: -10%;
-    }
+  100% {
+    bottom: -10%;
+  }
 }
 
 @keyframes updown3 {
-    0% {
-        bottom: 10%;
-    }
+  0% {
+    bottom: 10%;
+  }
 
-    50% {
-        bottom: 9%;
-    }
+  50% {
+    bottom: 9%;
+  }
 
-    100% {
-        bottom: 10%;
-    }
+  100% {
+    bottom: 10%;
+  }
 }
 
 .tStack div img {
-    animation: techw infinite linear 2s;
+  animation: techw infinite linear 2s;
 }
 
 @keyframes techw {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(.5rem);
-    }
+  50% {
+    transform: translateY(0.5rem);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .tStack div img:nth-child(1) {
-    animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
 .tStack div img:nth-child(2) {
-    animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
 .tStack div img:nth-child(3) {
-    animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
 
 .tStack div img:nth-child(4) {
-    animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
 
 .tStack div img:nth-child(5) {
-    animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+.tStack div img:nth-child(5) {
+  animation-delay: 2s;
 }
 
-#tpcCardImg{
-    transition: all 0.3s;
+#tpcCardImg {
+  transition: all 0.3s;
 }
-#btnanim, #btnanim_{
-    position: relative;
-    overflow: hidden;
-    z-index: 99;
-    transition: all 0.5s;
+#btnanim,
+#btnanim_ {
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+  transition: all 0.5s;
 }
-#btnanim:hover, #btnanim_:hover{
-    font-weight: 600;
+#btnanim:hover,
+#btnanim_:hover {
+  font-weight: 600;
 }
-#btnanim::after, #btnanim_::after{
-    content: "";
-    position: absolute;
-    background-color: var(--color7);
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    top: -450%;
-    left: -30%;
-    transition: all 1s;
-    z-index: -1;
+#btnanim::after,
+#btnanim_::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color7);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  top: -450%;
+  left: -30%;
+  transition: all 1s;
+  z-index: -1;
 }
-#btnanim::after{
-    left: -70%;
+#btnanim::after {
+  left: -70%;
 }
-#btnanim:hover::after, #btnanim_:hover::after{
-    top: -100%;
+#btnanim:hover::after,
+#btnanim_:hover::after {
+  top: -100%;
 }
 #spcImg {
-    box-shadow: 0px 0px 5px #1e1e1e;
+  box-shadow: 0px 0px 5px #1e1e1e;
 }
 #spccard {
-    position: relative;
-    background-color: #fff;
+  position: relative;
+  background-color: #fff;
 }
 #spccard::after {
-    content: "";
-    width: 110%;
-    height: 110%;
-    position: absolute;
-    top: -10px;
-    left: -20px;
-    z-index: -1;
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  z-index: -1;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
 }
 
 #spccard:nth-child(1)::after {
-    background-image: linear-gradient(135deg, #A0FE65 10%, #FA016D 100%);
+  background-image: linear-gradient(135deg, #a0fe65 10%, #fa016d 100%);
 }
 
 #spccard:nth-child(2)::after {
-    background-image: linear-gradient(135deg, #FEC163 10%, #DE4313 100%);
+  background-image: linear-gradient(135deg, #fec163 10%, #de4313 100%);
 }
 
 #rotateCircle {
-    box-shadow: 0px 0px 10px #1e1e1e;
-    animation: rotate infinite linear 10s;
+  box-shadow: 0px 0px 10px #1e1e1e;
+  animation: rotate infinite linear 10s;
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .tpcCard {
-    box-shadow: 0px 0px 10px #333333;
+  box-shadow: 0px 0px 10px #333333;
 }
 
 .frontend,
 .backend {
-    position: relative;
-    background-color: #fff;
+  position: relative;
+  background-color: #fff;
 }
 
 .stack::after {
-    content: "";
-    width: 110%;
-    height: 110%;
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    z-index: -1;
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
 }
 
 .stack:nth-child(1)::after {
-    background-image: linear-gradient(135deg, #A0FE65 10%, #FA016D 100%);
+  background-image: linear-gradient(135deg, #a0fe65 10%, #fa016d 100%);
 }
 
 .stack:nth-child(2)::after {
-    background-image: linear-gradient(135deg, #FEC163 10%, #DE4313 100%);
+  background-image: linear-gradient(135deg, #fec163 10%, #de4313 100%);
 }
 .cCard {
-    box-shadow: 0px 0px 10px #313131;
+  box-shadow: 0px 0px 10px #313131;
 }
 
 .thirdPage div .leftRight {
-    animation: run infinite linear 80s;
+  animation: run infinite linear 80s;
 }
 
 @keyframes run {
-    from {
-        transform: translateX(0);
-    }
+  from {
+    transform: translateX(0);
+  }
 
-    to {
-        transform: translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
+  }
 }
-@media only screen and (max-width:768px) {
-    .headerCenter {
-        position: absolute;
-        top: 10vh;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 0vh;
-        background-color: var(--color3);
-    }
+@media only screen and (max-width: 768px) {
+  .headerCenter {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0vh;
+    background-color: var(--color3);
+  }
 
-    .active {
-        width: 100%;
-        height: 90vh;
-    }
+  .active {
+    width: 100%;
+    height: 90vh;
+  }
 
-    .headerCenter ul {
-        gap: 2rem;
-        flex-direction: column;
-    }
+  .headerCenter ul {
+    gap: 2rem;
+    flex-direction: column;
+  }
 }
-@media only screen and (max-height:740px){
-    .secondPage{
-        margin-top: 5rem;
-    }
-    .thirdPage{
-        margin-top: 12rem;
-        height: 130vh;
-    }
-    .spcLeft div{
-        height: 14rem;
-    }
-    .thirdPageContent{
-        height: 100vh;
-    }
-    .frontend, .backend{
-        height: 60vh;
-    }
+@media only screen and (max-height: 740px) {
+  .secondPage {
+    margin-top: 5rem;
+  }
+  .thirdPage {
+    margin-top: 12rem;
+    height: 130vh;
+  }
+  .spcLeft div {
+    height: 14rem;
+  }
+  .thirdPageContent {
+    height: 100vh;
+  }
+  .frontend,
+  .backend {
+    height: 60vh;
+  }
 }
-@media only screen and (max-height:650px){
-    .secondPage{
-        margin-top: 10rem;
-    }
-    .thirdPage{
-        margin-top: 16rem;
-    }
-    .fifthPage{
-        margin-top: 55rem;
-    }
+@media only screen and (max-height: 650px) {
+  .secondPage {
+    margin-top: 10rem;
+  }
+  .thirdPage {
+    margin-top: 16rem;
+  }
+  .fifthPage {
+    margin-top: 55rem;
+  }
+}
+
+.card__article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Swiper container and slide styling */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 5rem 0;
+}
+
+.swiper-container {
+  width: 80%;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 328px;
+}
+
+.card__img {
+  width: 100%;
+  border-radius: 1.5rem;
+  border: 1px solid #555;
+}
+
+.card__data {
+  width: 90%;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 0 1rem 1rem 0;
+  position: absolute;
+  bottom: 2rem;
+  left: -150%;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.card__article:hover .card__data {
+  left: 0%;
+}
+
+.card__description {
+  font-size: var(--small-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: 0.75rem;
+}
+
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Swiper Navigation Arrows Centered to Cards */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  z-index: 999;
+}
+
+/* Optional: Increase arrow size for visibility */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 867px) {
+  .card__article {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
