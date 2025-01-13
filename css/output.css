@@ -984,6 +984,11 @@ video {
   background-color: var(--color6);
 }
 
+.bg-\[\#000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\/images\/img1\.jpg\'\)\] {
   background-image: url('../images/img1.jpg');
 }
@@ -1094,6 +1099,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-bold {
@@ -1370,6 +1380,10 @@ video {
     width: 90%;
   }
 
+  .max-md\:w-\[30\%\] {
+    width: 30%;
+  }
+
   .max-md\:flex-col {
     flex-direction: column;
   }
@@ -1434,6 +1448,10 @@ video {
 
   .max-sm\:items-center {
     align-items: center;
+  }
+
+  .max-sm\:justify-end {
+    justify-content: flex-end;
   }
 
   .max-sm\:justify-center {
