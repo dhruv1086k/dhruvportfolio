@@ -371,6 +371,7 @@ body {
     transform: translateX(-50%);
   }
 }
+
 @media only screen and (max-width: 768px) {
   .headerCenter {
     position: absolute;
