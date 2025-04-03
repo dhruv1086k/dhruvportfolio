@@ -196,7 +196,7 @@ body {
 }
 
 .tStack div img {
-  animation: techw infinite linear 2s;
+  animation: techw infinite linear 2.6s;
 }
 
 @keyframes techw {
@@ -232,8 +232,17 @@ body {
 .tStack div img:nth-child(5) {
   animation-delay: 1.8s;
 }
-.tStack div img:nth-child(5) {
+.tStack div img:nth-child(6) {
   animation-delay: 2s;
+}
+.tStack div img:nth-child(7) {
+  animation-delay: 2.2s;
+}
+.tStack div img:nth-child(8) {
+  animation-delay: 2.4s;
+}
+.tStack div img:nth-child(9) {
+  animation-delay: 2.6s;
 }
 
 #tpcCardImg {
@@ -316,7 +325,8 @@ body {
 }
 
 .frontend,
-.backend {
+.backend,
+.database {
   position: relative;
   background-color: #fff;
 }
@@ -333,11 +343,15 @@ body {
   filter: blur(20px);
 }
 
-.stack:nth-child(1)::after {
+.frontend.stack::after {
   background-image: linear-gradient(135deg, #a0fe65 10%, #fa016d 100%);
 }
 
-.stack:nth-child(2)::after {
+.backend.stack::after {
+  background-image: linear-gradient(135deg, #fec163 10%, #de4313 100%);
+}
+
+.database.stack::after {
   background-image: linear-gradient(135deg, #fec163 10%, #de4313 100%);
 }
 .cCard {
@@ -377,35 +391,44 @@ body {
     gap: 2rem;
     flex-direction: column;
   }
+  .thirdPageContent {
+    gap: 3rem; /* Increase gap between elements on mobile */
+  }
 }
 @media only screen and (max-height: 740px) {
   .secondPage {
     margin-top: 5rem;
+    min-height: 100vh;
   }
+
   .thirdPage {
-    margin-top: 12rem;
-    height: 130vh;
+    margin-top: 2rem;
+    min-height: 100vh;
+    padding-bottom: 5rem;
+  }
+
+  .frontend,
+  .backend,
+  .database {
+    height: auto;
+    min-height: 40vh;
+    margin-bottom: 2rem;
   }
   .spcLeft div {
     height: 14rem;
   }
-  .thirdPageContent {
-    height: 100vh;
-  }
-  .frontend,
-  .backend {
-    height: 60vh;
-  }
 }
 @media only screen and (max-height: 650px) {
   .secondPage {
-    margin-top: 10rem;
+    margin-top: 5rem;
   }
+
   .thirdPage {
-    margin-top: 16rem;
+    margin-top: 5rem;
   }
+
   .fifthPage {
-    margin-top: 55rem;
+    margin-top: 5rem;
   }
 }
 
@@ -488,7 +511,6 @@ body {
 .card__button:hover {
   text-decoration: underline;
 }
-
 
 /* Swiper Navigation Arrows Centered to Cards */
 .swiper-button-next,
