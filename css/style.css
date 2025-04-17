@@ -46,6 +46,20 @@ body {
   --color8: #fff;
   --color9: #676767;
 }
+
+/* Default (light theme) */
+.dark-theme-image {
+  display: none;
+}
+
+/* When dark-mode class is added to body or html */
+.dark-theme .light-theme-image {
+  display: none;
+}
+.dark-theme .dark-theme-image {
+  display: block;
+}
+
 #preloader {
   width: 100%;
   height: 100vh;

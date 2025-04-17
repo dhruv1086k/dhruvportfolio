@@ -16,6 +16,73 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+    <style>
+      .star {
+        position: absolute;
+        pointer-events: none;
+      }
+
+      @keyframes fallingStar1 {
+        0% {
+          transform: translate(0, 0) scale(var(--star-scale));
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          transform: translate(100vw, 100vh) scale(var(--star-scale));
+          opacity: 0;
+        }
+      }
+
+      @keyframes fallingStar2 {
+        0% {
+          transform: translate(0, 0) scale(var(--star-scale));
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.5;
+        }
+        100% {
+          transform: translate(90vw, 110vh) scale(var(--star-scale));
+          opacity: 0;
+        }
+      }
+
+      @keyframes fallingStar3 {
+        0% {
+          transform: translate(0, 0) scale(var(--star-scale));
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          transform: translate(110vw, 90vh) scale(var(--star-scale));
+          opacity: 0;
+        }
+      }
+
+      .path1 {
+        animation: fallingStar1 var(--duration) linear forwards;
+      }
+      .path2 {
+        animation: fallingStar2 var(--duration) linear forwards;
+      }
+      .path3 {
+        animation: fallingStar3 var(--duration) linear forwards;
+      }
+    </style>
   </head>
 
   <body>
@@ -26,17 +93,35 @@
       />
     </div>
     <div
-      class="frontPage w-full h-screen px-32 max-xl:px-10 max-sm:px-3 max-lg:h-[120vh] max-sm:h-auto"
+      class="frontPage relative w-full h-screen px-32 max-xl:px-10 max-sm:px-3 max-lg:h-[120vh] max-sm:h-auto"
       id="firstPage"
     >
+      <divs
+        id="backdrop"
+        class="absolute inset-0 w-full h-full overflow-hidden z-0"
+      >
+        <!-- Background with gradient -->
+        <div class="absolute inset-0 w-full h-full"></div>
+
+        <!-- Stars will be generated here by JavaScript -->
+      </divs>
       <div
         class="header w-full h-[10vh] flex bg-[color:var(--color3)] fixed left-0 px-32 max-xl:px-10 max-sm:px-3"
       >
         <div
           class="headerLeft h-full w-[20%] flex justify-start items-center max-xl:w-[10%] max-md:w-[70%] text-[color:var(--color2)]"
         >
-          <a href="#firstPage">
-            <h1 class="text-4xl font-bold cursor-pointer">DP.</h1>
+          <a href="#firstPage" class="block">
+            <img
+              src="./images/logo_gif.gif"
+              alt=""
+              class="h-16 w-16 light-theme-image"
+            />
+            <img
+              src="./images/logo_gif_dark.gif"
+              alt=""
+              class="h-16 w-16 dark-theme-image"
+            />
           </a>
         </div>
         <div class="headerCenter h-full w-[60%] max-xl:w-[70%]">
@@ -202,16 +287,13 @@
           class="spcLeft w-1/2 h-full max-lg:h-[45%] flex max-lg:w-full max-lg:justify-center max-lg:mb-10"
         >
           <div
-            class="w-3/4 h-3/4 bg-no-repeat bg-cover rounded-3xl bg-top max-lg:h-full max-lg:w-[15rem] flex justify-center items-end relative"
-            style="background-image: url('images/img10.jpg')"
-            data-aos="fade-up"
-            data-aos-offset="250"
+            id="particle-slider"
+            class="object1 bg-transparent w-full h-full overflow-hidden relative z-t2"
           >
-            <img
-              src="./images/circle.png"
-              class="w-[8rem] rounded-full absolute -bottom-16 max-lg:w-[4rem] max-lg:-bottom-8"
-              id="rotateCircle"
-            />
+            <div class="slides">
+              <div class="slide" data-src="./images/img101.png"></div>
+            </div>
+            <canvas class="draw"></canvas>
           </div>
         </div>
         <div
@@ -837,6 +919,77 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="./js/ParticleDust.js"></script>
+    <script>
+      // ~~~~~~~~~~~~~~~~~~~ PARTICLE DUST ~~~~~~~~~~~~~~~~~~~~~
+      var init = function () {
+        var ps = new ParticleSlider({
+          width: 1e6,
+          height: 1e6,
+        });
+      };
+      window.addEventListener("load", init, false);
+    </script>
+    <script>
+      // Function to create falling stars
+      function createFallingStar() {
+        const backdrop = document.getElementById("backdrop");
+        const star = document.createElement("div");
+
+        // Random starting position across the screen
+        const startX = Math.random() * 80; // 0-80% from left
+        const startY = Math.random() * 40; // 0-40% from top
+        const scale = Math.random() * 0.5 + 0.5; // Random size between 0.5 and 1
+        const duration = Math.random() * 3 + 4; // Random duration between 4-7 seconds
+
+        // Pick a random path style
+        const pathType = Math.floor(Math.random() * 3) + 1;
+
+        // Set star position and styling
+        star.classList.add("star", `path${pathType}`);
+        star.style.top = `${startY}%`;
+        star.style.left = `${startX}%`;
+        star.style.setProperty("--star-scale", scale);
+        star.style.setProperty("--duration", `${duration}s`);
+
+        // Create image element for the star
+        const img = document.createElement("img");
+        img.src = "./images/star.gif"; // Replace with your actual GIF path
+        img.alt = "Falling star";
+        img.classList.add("w-16", "h-16", "object-contain");
+
+        // Append image to star div
+        star.appendChild(img);
+
+        // Append star to backdrop
+        backdrop.appendChild(star);
+
+        // Remove star after animation completes
+        setTimeout(() => {
+          star.remove();
+        }, duration * 1000);
+      }
+
+      // Create a star at random intervals
+      function scheduleNextStar() {
+        // Increase the minimum and maximum values below to have longer delays
+        const randomDelay = Math.random() * 3000 + 2000; // Now 2-5 seconds between stars (was 0.5-2 seconds)
+        setTimeout(() => {
+          createFallingStar();
+          scheduleNextStar();
+        }, randomDelay);
+      }
+
+      // Start the star creation process
+      scheduleNextStar();
+
+      // Create initial stars
+      for (let i = 0; i < 2; i++) {
+        setTimeout(() => {
+          createFallingStar();
+        }, i * 300);
+      }
     </script>
   </body>
 </html>
